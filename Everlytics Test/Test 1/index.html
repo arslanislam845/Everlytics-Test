@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="styles.css" />
+	<title>Test # 1</title>
+</head>
+
+<body>
+	<div class="container">
+		<form id="form" class="form">
+			<div class="form-control">
+				<label for="source">Select your source :</label>
+				<div id="verticalLine"></div>
+				<input type="text" id="source" value="Google Cloud Storage"/>
+			</div>
+			<div class="form-control">
+				<label for="pipeline">Provide a name for pipeline :</label>
+				<div id="verticalLine"></div>
+				<input type="text" id="pipeline" placeholder="e.g., cust_shop_energy_gkateway001" />
+				  
+			</div>
+			<div class="form-control">
+				<label for="project">GCS project name :</label>
+				<div id="verticalLine"></div>
+				<input type="text" id="project" placeholder="project-id" />
+				  
+			</div>
+			<div class="form-control">
+				<label for="bucket">GCS bucket name :</label>
+				<div id="verticalLine"></div>
+				<input type="text" id="bucket" placeholder="gs://your-bucket" />
+				  
+			</div>
+			<div class="form-control">
+				<label for="storage">Input Cloud Storage File(s) :</label>
+				<div id="verticalLine"></div>
+				<div class="bucket">
+					<input type="text" id="storage" placeholder="GCS location of your files" />
+					<p class="ex-style">Example: <br>gs://your-bucket/your-files/01.csv</p>
+				</div>
+				  
+			</div>
+			<div class="form-control credentials">
+				<label for="credentials">GCS credentials :</label>
+				<div id="verticalLine"></div>
+				<input type="text" id="credentials" />
+				  
+			</div>
+			<div class="form-control">
+				<label for="run_every">Run Every :</label>
+				<div id="verticalLine"></div>
+				<input type="text" id="run_every" placeholder="(in minutes)" />
+				  
+			</div>
+			<div class="form-buttons">
+				<button type="submit" id="submit" onclick="submit()">Create</button>
+				<button id="cancle" onclick="reset()">Cancel</button>
+			</div>
+		</form>
+	</div>
+	<script src="script.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
