@@ -21,12 +21,11 @@ fetch('./data.json')
                 var tr = table.insertRow(-1);
                 for (var j = 0; j < col.length; j++) {
                     var th = document.createElement("th");
-                    th.innerHTML = data[0][col[j]];
+                    const result = data[0][col[j]].replaceAll('_', ' ');
+                    th.innerHTML = result;
                     tr.appendChild(th);
                 }
             }
-
-
 
             else {
                 tr = table.insertRow(-1);
@@ -46,7 +45,7 @@ fetch('./data.json')
     
     )
     .catch(err => {
-        alert("Json File Not Found")
+        alert("Json File Not Found , Please Run the File using Live Server")
     })
 
 

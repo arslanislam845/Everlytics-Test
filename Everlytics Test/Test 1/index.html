@@ -15,49 +15,51 @@
 			<div class="form-control">
 				<label for="source">Select your source :</label>
 				<div id="verticalLine"></div>
-				<input type="text" id="source" value="Google Cloud Storage"/>
+				<input type="text" id="source" disabled value="Google Cloud Storage" />
+				<small>Error message</small>
 			</div>
 			<div class="form-control">
 				<label for="pipeline">Provide a name for pipeline :</label>
 				<div id="verticalLine"></div>
 				<input type="text" id="pipeline" placeholder="e.g., cust_shop_energy_gkateway001" />
-				  
+				<small>Error message</small>
 			</div>
 			<div class="form-control">
 				<label for="project">GCS project name :</label>
 				<div id="verticalLine"></div>
 				<input type="text" id="project" placeholder="project-id" />
-				  
+				<small>Error message</small>
 			</div>
 			<div class="form-control">
 				<label for="bucket">GCS bucket name :</label>
 				<div id="verticalLine"></div>
 				<input type="text" id="bucket" placeholder="gs://your-bucket" />
-				  
+				<small>Error message</small>
 			</div>
-			<div class="form-control">
+			<div class="form-control storage">
 				<label for="storage">Input Cloud Storage File(s) :</label>
 				<div id="verticalLine"></div>
-				<div class="bucket">
-					<input type="text" id="storage" placeholder="GCS location of your files" />
-					<p class="ex-style">Example: <br>gs://your-bucket/your-files/01.csv</p>
+				<input type="text" id="storage" placeholder="GCS location of your files" />
+				<small>Error message</small>
+				<div class="example">
+					<p class="exp_style">Example: <br>gs://your-bucket/your-files/01.csv</p>
 				</div>
-				  
+
 			</div>
 			<div class="form-control credentials">
 				<label for="credentials">GCS credentials :</label>
 				<div id="verticalLine"></div>
 				<input type="text" id="credentials" />
-				  
+				<small>Error message</small>
 			</div>
 			<div class="form-control">
 				<label for="run_every">Run Every :</label>
 				<div id="verticalLine"></div>
 				<input type="text" id="run_every" placeholder="(in minutes)" />
-				  
+				<small>Error message</small>
 			</div>
 			<div class="form-buttons">
-				<button type="submit" id="submit" onclick="submit()">Create</button>
+				<button type="submit" id="submit">Create</button>
 				<button id="cancle" onclick="reset()">Cancel</button>
 			</div>
 		</form>

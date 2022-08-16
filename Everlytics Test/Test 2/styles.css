@@ -15,8 +15,9 @@ td{
     text-align: center;
 }
 th{
-   font-size: 14px;
-   text-transform: capitalize;
+   font-size: 10px;
+   font-weight: bolder;
+   text-transform: uppercase;
 }
 
 th:nth-child(even),td:nth-child(even) {
